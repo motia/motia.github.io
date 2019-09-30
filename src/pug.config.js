@@ -67,8 +67,8 @@ module.exports = {
             },
             {
                 id: 2,
-                title: 'Raceedi',
-                link: '#',
+                title: 'Rassidi',
+                link: 'https://rassidi.com',
                 text: 'A PWA + Laravel API for a store that sells virtual payment cards using the local currency.',
                 stack: ['Laravel', 'Nuxt.js', 'Onesignal API', 'MySQL8']
             }

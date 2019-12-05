@@ -7,7 +7,7 @@ html(lang="en")
     meta(http-equiv="X-UA-Compatible" content="IE=edge")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
     meta(name="description" content=`${meta.description}`)
-    meta(name="author" content="Mouti'a Benachour")
+    meta(name="author" content="{{ meta.author }}")
     link(rel="shortcut icon" href="favicon.ico")
     link(
       href="https://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic" 
@@ -42,14 +42,14 @@ html(lang="en")
       .container.clearfix
         img.profile-image.img-fluid.float-left(
           src="./assets/img/profile.jpeg"
-          alt="Mouti'a Benachour"
+          alt=`${profile.imageAlt}`
           style="border-radius: 50%;\
             width: 180px;\
             height: 180px;"
         )
         .profile-content.float-left
-          h1.name Mouti'a Benachour
-          h2.desc Fullstack Developer
+          h1.name #{ profile.name }
+          h2.desc #{ profile.title }
           ul.social.list-inline
             for p in presence
               li.list-inline-item

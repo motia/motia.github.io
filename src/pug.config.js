@@ -1,8 +1,14 @@
 module.exports = {
     locals: {
         meta: {
-            title: 'Moutia Benachour',
-            description: 'Moutia Benachour portfolio'
+            title: 'Moutia Benachour\'s portfolio',
+            description: 'Moutia Benachour portfolio',
+            author: 'Moutia Benachour'
+        },
+        profile: {
+            name: 'Moutia Benachour',
+            title: 'Fullstack Developer',
+            imageAlt: 'Moutia Benachour'
         },
         infos: {
             email: 'motia@benachour.me',

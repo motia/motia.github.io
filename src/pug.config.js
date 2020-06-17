@@ -76,16 +76,25 @@ module.exports = {
                 title: 'Dromigo',
                 link: 'https://dromigo.com',
                 text: 'A platform where carriers and ' +
-                'shippers can find loads and freight, I developed a PWA to allow the users ' + 
-                'make their deals and a mobile app to help drivers track their loads.',
-                stack: ['PHP', 'Doctrine', 'Nuxt.js', 'PostgreSQL', 'Redis', 'websocket', 'node.js', 'Flutter', 'Docker', 'PWA', 'Onesignal API', 'Stripe API']
+                    'shippers can find loads and freight, I developed a PWA to allow the users ' +
+                    'make their deals and a mobile app to help drivers track their loads.',
+                stack: ['PHP', 'Doctrine', 'Nuxt.js', 'PostgreSQL', 'Redis', 'websockets', 'node.js', 'Flutter', 'Docker', 'PWA', 'Onesignal API', 'Stripe API']
+            },
+            {
+                id: 5,
+                title: 'Pages Jaunes Algérie',
+                link: 'https://play.google.com/store/apps/details?id=com.pagesjaunes.smartpj&hl=en',
+                text: 'An address book for Algerian businesses which allows users to contact them or view their locations. '+
+                    'Also, It is designed to provide the best UX for slow internet connections in mind, so it '+
+                    'uses caching for screens API data and saving favorite business for offline browsing.',
+                stack: ['Vue.js', 'Quasar Framework', 'Cordova'],
             },
             {
                 id: 2,
                 title: 'Rassidi',
                 link: 'https://rassidi.com',
                 text: 'A PWA + Laravel API for a store that sells virtual payment cards using the local currency.',
-                stack: ['Laravel', 'Eloquent', 'Nuxt.js', 'Onesignal API', 'PostGres']
+                stack: ['Laravel', 'Eloquent', 'Nuxt.js', 'Vue.js', 'Onesignal API', 'PostgreSQL']
             },
             {
     			id: 3,
@@ -100,7 +109,7 @@ module.exports = {
             	title: 'Medic Dz',
             	link: '#',
             	text: 'A mobile for appointment management at medical offices. Both the normal users and the service provider can the appointments status and availablity in realtime',
-            	stack: ['Laravel', 'Elqouent', 'Vue', 'Quasar Framework', 'PostGres', 'Onesignal', 'websocket', 'node.js', 'cordova', 'PWA']
+                stack: ['Laravel', 'Elqouent', 'Vue.js', 'Quasar Framework', 'PostgreSQL', 'Onesignal', 'websocket', 'node.js', 'cordova', 'PWA']
             }
         ],
         otherProjects: [

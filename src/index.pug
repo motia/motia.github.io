@@ -18,9 +18,7 @@ html(lang="en")
       rel="stylesheet"
       type="text/css"
     )
-    // FontAwesome JS
-    //- link(href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css", rel="stylesheet", integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN", crossorigin="anonymous")
-    script(defer="" src="https://use.fontawesome.com/releases/v5.7.2/js/all.js" integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP" crossorigin="anonymous")
+
     // Global CSS
     link(rel="stylesheet" href="./assets/css/bootstrap.min.css")
     link(rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css")
@@ -35,7 +33,6 @@ html(lang="en")
         })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
         ga('create', #{googleAnalyticId}, 'auto');
         ga('send', 'pageview');
-    // End Facebook Pixel Code
   body
     // ******HEADER******
     header.header
@@ -53,10 +50,11 @@ html(lang="en")
           ul.social.list-inline
             for p in presence
               li.list-inline-item
-                a(href=`${p.link}`)
-                  i.fab(
-                    class=`fa-${p.icon}`
-                  )
+                a(
+                  href=`${p.link}`
+                ): div(
+                  style=`background-image: url(${p.icon});`
+                )
         // //profile
         a.btn.btn-cta-primary.float-right(
           href=`mailto:${infos.email}`
@@ -370,15 +368,4 @@ html(lang="en")
           |  for developers
       // //container
     // //footer
-    // Javascript
-    // script(type="text/javascript" src="assets/plugins/jquery-3.3.1.min.js")
-    // script(type="text/javascript" src="assets/plugins/popper.min.js")
-    // script(type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js")
-    // script(type="text/javascript" src="assets/plugins/jquery-rss/dist/jquery.rss.min.js")
-    // github calendar plugin
-    // script(type="text/javascript" src="assets/plugins/github-calendar/dist/github-calendar.min.js")
-    // github activity plugin
-    // script(type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js")
-    // script(type="text/javascript" src="assets/plugins/github-activity/github-activity-0.1.5.min.js")
-    // custom js
-    // script(type="text/javascript" src="assets/js/main.js")
+

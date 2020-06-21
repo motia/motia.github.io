@@ -1,3 +1,12 @@
+const fs = require('fs');
+const path = require('path');
+const svgToDataURL = require('svg-to-dataurl')
+
+const loadSvg = function (name) {
+    const svgStr = fs.readFileSync(path.join(__dirname, 'assets', 'svg', `${name}.svg`));
+    return svgToDataURL(svgStr)
+}
+
 module.exports = {
     locals: {
         meta: {
@@ -24,15 +33,15 @@ module.exports = {
         ],
         presence: [
             {
-                icon: 'github',
+                icon: loadSvg('github'),
                 link: 'https://github.com/motia'
             },
             {
-                icon: 'linkedin-in',
+                icon: loadSvg('linkedin'),
                 link: 'https://www.linkedin.com/in/moutia-benachour/'
             },
             {
-                icon: 'stack-overflow',
+                icon: loadSvg('stackoverflow'),
                 link: 'https://stackoverflow.com/users/6501536/motia'
             }
         ],

@@ -7,5 +7,8 @@
     "dev": "parcel src/index.pug",
     "devopen": "parcel src/index.pug --open 'google chrome'",
     "build": "parcel build src/index.pug && cp src/CNAME dist/CNAME && touch dist/.nojekyll"
+  },
+  "dependencies": {
+    "svg-to-dataurl": "^1.0.0"
   }
 }

@@ -13,7 +13,8 @@ const { availability } = Astro.props as { availability: PortfolioData['availabil
       </div>
       <div class="availability-links contact-links">
         {availability.links.map((link) => {
-          const inner = <><Icon name={link.type} class="cl-icon" /><div class="cl-info"><div class="cl-label">{link.label}</div><div class="cl-value">{link.value}</div></div></>;
+          const iconName = link.icon ?? link.type;
+          const inner = <><Icon name={iconName} class="cl-icon" /><div class="cl-info"><div class="cl-label">{link.label}</div><div class="cl-value">{link.value}</div></div></>;
           return link.href
             ? <a href={link.href} target={link.href.startsWith('http') ? '_blank' : undefined} rel={link.href.startsWith('http') ? 'noopener' : undefined} class="cl">{inner}</a>
             : <div class="cl" style="cursor:default;">{inner}</div>;

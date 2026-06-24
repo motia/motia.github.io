@@ -169,6 +169,11 @@
         "type": "location",
         "label": "Location",
         "value": "Algiers, Algeria · Remote worldwide"
+      },
+      {
+        "label": "Languages",
+        "value": "English · Arabic · French",
+        "icon": "languages"
       }
     ]
   },

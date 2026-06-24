@@ -31,10 +31,11 @@ const navLinkSchema = z.object({
 });
 
 const availabilityLinkSchema = z.object({
-  type: z.enum(['email', 'linkedin', 'github', 'toptal', 'location']),
+  type: z.enum(['email', 'linkedin', 'github', 'toptal', 'location']).optional(),
   label: nonEmpty,
   value: nonEmpty,
-  href: href.optional()
+  href: href.optional(),
+  icon: nonEmpty.optional()
 });
 
 const capabilitySchema = z.object({

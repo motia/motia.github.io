@@ -114,14 +114,26 @@ export const portfolioSchema = z.object({
     kicker: nonEmpty,
     title: nonEmpty,
     descriptionParts: z.array(richPartSchema).min(1),
-    badge: z.object({
-      stars: nonEmpty,
-      title: nonEmpty,
-      subtitle: nonEmpty,
-      brand: nonEmpty,
-      cta: nonEmpty,
-      href
-    })
+    badge: z.discriminatedUnion('kind', [
+      z.object({
+        kind: z.literal('toptal'),
+        stars: nonEmpty,
+        title: nonEmpty,
+        subtitle: nonEmpty,
+        brand: nonEmpty,
+        cta: nonEmpty,
+        href
+      }),
+      z.object({
+        kind: z.literal('custom'),
+        title: nonEmpty,
+        subtitle: nonEmpty,
+        brand: nonEmpty,
+        cta: nonEmpty,
+        href,
+        stars: nonEmpty.optional()
+      })
+    ])
   }),
   availability: z.object({
     eyebrow: nonEmpty,

@@ -1,0 +1,26 @@
+---
+import type { PortfolioData } from '../data/schema';
+import Icon from './Icon.astro';
+import SectionHeading from './SectionHeading.astro';
+const { section, capabilities } = Astro.props as {
+  section: PortfolioData['capabilitiesSection'];
+  capabilities: PortfolioData['capabilities'];
+};
+---
+<section id="capabilities">
+  <div class="container">
+    <SectionHeading label={section.label} title={section.title} subtitle={section.subtitle} />
+    <div class="cap-grid">
+      {capabilities.map((capability) => (
+        <div class="cap-card" data-a>
+          <Icon name={capability.icon} class="cap-icon" />
+          <div class="cap-title">{capability.title}</div>
+          <p class="cap-body">{capability.body}</p>
+          <div class="cap-tags">
+            {capability.tags.map((tag) => <span class="cap-tag">{tag}</span>)}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

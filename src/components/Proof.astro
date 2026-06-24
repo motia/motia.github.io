@@ -1,0 +1,23 @@
+---
+import type { PortfolioData } from '../data/schema';
+import RichText from './RichText.astro';
+const { proof } = Astro.props as { proof: PortfolioData['proof'] };
+---
+<section id="proof">
+  <div class="container proof-layout">
+    <a class="proof-badge" href={proof.badge.href} target="_blank" rel="noopener" data-a>
+      <div class="proof-stars">{proof.badge.stars}</div>
+      <div class="proof-badge-title">{proof.badge.title}</div>
+      <div class="proof-badge-rule"></div>
+      <div class="proof-badge-sub">{proof.badge.subtitle}</div>
+      <div class="proof-brand">{proof.badge.brand}</div>
+      <span class="proof-hire">{proof.badge.cta}</span>
+    </a>
+
+    <div class="proof-copy" data-a>
+      <div class="proof-kicker">{proof.kicker}</div>
+      <h2 class="proof-title">{proof.title}</h2>
+      <p><RichText parts={proof.descriptionParts} /></p>
+    </div>
+  </div>
+</section>

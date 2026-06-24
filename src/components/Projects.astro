@@ -1,0 +1,30 @@
+---
+import type { PortfolioData } from '../data/schema';
+const { section, projects } = Astro.props as {
+  section: PortfolioData['projectsSection'];
+  projects: PortfolioData['projects'];
+};
+---
+<section id="projects">
+  <div class="container">
+    <div class="sec-label">{section.label}</div>
+    <h2 class="sec-title">{section.title.main} <em>{section.title.emphasis}</em></h2>
+  </div>
+  <div class="proj-grid" style="margin-top:48px;">
+    {projects.map((project) => (
+      <div class="proj-card" data-a style={`--project-accent-rgb:${project.accentRgb};`}>
+        <div class="proj-img"></div>
+        <div class="proj-tint"></div>
+        <div class="proj-content">
+          <span class="proj-num">{project.number}</span>
+          <div class="proj-domain">{project.domain}</div>
+          <div class="proj-title">{project.title}</div>
+          <p class="proj-desc">{project.description}</p>
+          <div class="proj-stack">
+            {project.stack.map((tag) => <span class="ps-tag">{tag}</span>)}
+          </div>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>

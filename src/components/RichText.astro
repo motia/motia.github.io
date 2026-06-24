@@ -1,0 +1,4 @@
+---
+const { parts } = Astro.props as { parts: Array<{ text: string; strong?: boolean }> };
+---
+{parts.map((part) => part.strong ? <strong>{part.text}</strong> : part.text)}

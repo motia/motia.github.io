@@ -1,0 +1,37 @@
+---
+import type { PortfolioData } from '../data/schema';
+import RichText from './RichText.astro';
+const { hero } = Astro.props as { hero: PortfolioData['hero'] };
+---
+<section id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-grid-bg"></div>
+  <div class="hero-left">
+    <div class="hero-eyebrow">{hero.eyebrow}</div>
+    <h1 class="hero-h1">{hero.name.split(' ')[0]}<em>{hero.name.split(' ').slice(1).join(' ')}</em></h1>
+
+    <div class="hero-rotating" aria-label="Positioning statements">
+      <div class="hero-rotating-inner">
+        {hero.phrases.map((phrase) => <p class="hero-phrase">{phrase}</p>)}
+      </div>
+    </div>
+
+    <div class="hero-divider"></div>
+    <p class="hero-desc"><RichText parts={hero.descriptionParts} /></p>
+
+    <div class="hero-stats">
+      {hero.stats.map((stat) => (
+        <div class="h-stat">
+          <span class="h-stat-n">{stat.value}</span>
+          <span class="h-stat-l">{stat.label}</span>
+        </div>
+      ))}
+    </div>
+
+    <div class="hero-cta">
+      {hero.actions.map((action) => (
+        <a class={action.variant === 'primary' ? 'btn-p' : 'btn-g'} href={action.href}>{action.label}</a>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,20 @@
+{
+  "name": "moutia-portfolio",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "validate:data": "tsx src/data/validate.ts",
+    "build": "npm run validate:data && astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "astro": "^5.0.0"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0",
+    "zod": "^3.24.0"
+  }
+}

@@ -1,0 +1,27 @@
+---
+import type { PortfolioData } from '../data/schema';
+const { contact, year } = Astro.props as { contact: PortfolioData['contact']; year: number };
+---
+<section id="contact" class="final-contact">
+  <div class="container">
+    <div class="final-cta-inner">
+      <div>
+        <div class="avail"><span class="avail-dot"></span>{contact.eyebrow}</div>
+        <h2 class="final-title">{contact.title.main}<em>{contact.title.emphasis}</em></h2>
+        <p class="final-copy">{contact.copy}</p>
+      </div>
+      <div class="final-actions">
+        {contact.actions.map((action) => (
+          <a class={action.variant === 'primary' ? 'btn-p' : 'btn-g'} href={action.href} target={action.external ? '_blank' : undefined} rel={action.external ? 'noopener' : undefined}>{action.label}</a>
+        ))}
+      </div>
+    </div>
+    <div class="footer-bar">
+      <span class="footer-copy">© {year} Moutia Benachour. All rights reserved.</span>
+      <div class="footer-tech">
+        {contact.footerTech.map((item) => <span class="ft">{item}</span>)}
+        <a href="#home" style="font-size:11px;color:var(--text3);text-decoration:none;margin-left:8px;transition:color .2s;">↑ Top</a>
+      </div>
+    </div>
+  </div>
+</section>

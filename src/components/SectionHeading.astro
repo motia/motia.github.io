@@ -1,0 +1,14 @@
+---
+const { label, title, subtitle } = Astro.props as {
+  label: string;
+  title: { main: string; emphasis: string };
+  subtitle?: string;
+};
+---
+<div class="section-lead">
+  <div>
+    <div class="sec-label">{label}</div>
+    <h2 class="sec-title">{title.main}<br /><em>{title.emphasis}</em></h2>
+  </div>
+  {subtitle && <p class="sec-sub">{subtitle}</p>}
+</div>

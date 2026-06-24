@@ -1,0 +1,15 @@
+---
+import type { PortfolioData } from '../data/schema';
+const { lifecycle } = Astro.props as { lifecycle: PortfolioData['lifecycle'] };
+---
+<div class="lifecycle-bar">
+  <div class="lifecycle-inner">
+    {lifecycle.map((item, index) => (
+      <div class={`stage-tab ${index === 0 ? 'active' : ''}`}>
+        <span class="stage-num">{item.number}</span>
+        <span class="stage-name">{item.name}</span>
+        <span class="stage-desc">{item.description}</span>
+      </div>
+    ))}
+  </div>
+</div>

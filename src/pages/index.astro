@@ -1,0 +1,29 @@
+---
+import portfolio from '../data/portfolio.json';
+import type { PortfolioData } from '../data/schema';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import Proof from '../components/Proof.astro';
+import Availability from '../components/Availability.astro';
+import LifecycleBar from '../components/LifecycleBar.astro';
+import Capabilities from '../components/Capabilities.astro';
+import Stages from '../components/Stages.astro';
+import Projects from '../components/Projects.astro';
+import AiSection from '../components/AiSection.astro';
+import Contact from '../components/Contact.astro';
+
+const data = portfolio as PortfolioData;
+---
+<BaseLayout title={data.site.title} description={data.site.description} author={data.site.author}>
+  <Header nav={data.nav} />
+  <Hero hero={data.hero} />
+  <Proof proof={data.proof} />
+  <Availability availability={data.availability} />
+  <LifecycleBar lifecycle={data.lifecycle} />
+  <Capabilities section={data.capabilitiesSection} capabilities={data.capabilities} />
+  <Stages section={data.stagesSection} stages={data.stages} />
+  <Projects section={data.projectsSection} projects={data.projects} />
+  <AiSection ai={data.aiSection} />
+  <Contact contact={data.contact} year={data.site.year} />
+</BaseLayout>

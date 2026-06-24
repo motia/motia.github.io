@@ -1,0 +1,57 @@
+---
+import type { PortfolioData } from '../data/schema';
+import Icon from './Icon.astro';
+import SectionHeading from './SectionHeading.astro';
+const { section, stages } = Astro.props as {
+  section: PortfolioData['stagesSection'];
+  stages: PortfolioData['stages'];
+};
+---
+<section id="stages">
+  <div class="container">
+    <SectionHeading label={section.label} title={section.title} subtitle={section.subtitle} />
+    <div class="stages-layout">
+      <div class="stages-nav">
+        {stages.map((stage, index) => (
+          <button class={`sn-item ${index === 0 ? 'active' : ''}`} type="button" data-stage-target={stage.id}>
+            <span class="sn-phase">{stage.phase}</span>
+            <span class="sn-label">{stage.label}</span>
+            <span class="sn-range">{stage.range}</span>
+          </button>
+        ))}
+      </div>
+
+      <div class="stages-content">
+        {stages.map((stage, index) => (
+          <div class={`stage-panel ${index === 0 ? 'active' : ''}`} id={stage.id}>
+            <div class="sp-header">
+              <div class="sp-left">
+                <div class="sp-phase-badge">{stage.phaseBadge}</div>
+                <div class="sp-company">{stage.company}</div>
+                <div class="sp-role">{stage.role}</div>
+                <div class="sp-meta">
+                  {stage.meta.map((item) => <span>{item}</span>)}
+                </div>
+              </div>
+              <div class="sp-right"><div class="sp-industry">{stage.industry}</div></div>
+            </div>
+            <div class="sp-outcomes">
+              <div class="sp-outcomes-title">{stage.outcomesTitle}</div>
+              <div class="outcome-list">
+                {stage.outcomes.map((outcome) => (
+                  <div class="outcome-item">
+                    <Icon name="check" class="outcome-icon" />
+                    <div class="outcome-text">{outcome}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div class="sp-tech">
+              {stage.tech.map((tag) => <span class="tech-tag">{tag}</span>)}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

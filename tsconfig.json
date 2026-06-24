@@ -1,0 +1,9 @@
+{
+  "extends": "astro/tsconfigs/strict",
+  "compilerOptions": {
+    "resolveJsonModule": true,
+    "verbatimModuleSyntax": true,
+    "types": ["astro/client"]
+  },
+  "include": ["src/**/*", "astro.config.mjs"]
+}

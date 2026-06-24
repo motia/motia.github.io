@@ -1,0 +1,22 @@
+---
+import type { PortfolioData } from '../data/schema';
+const { nav } = Astro.props as { nav: PortfolioData['nav'] };
+---
+<div class="cursor" id="cur"></div>
+<div class="cursor-ring" id="curR"></div>
+<div class="prog" id="prog"></div>
+<button class="scroll-top" id="stBtn" data-scroll-top aria-label="Scroll to top">↑</button>
+
+<nav id="nav">
+  <a href="#home" class="nav-logo">{nav.logo}</a>
+  <ul class="nav-links" id="navLinks">
+    {nav.links.map((link) => (
+      <li><a href={link.href} data-s={link.section}>{link.label}</a></li>
+    ))}
+  </ul>
+  <button class="ham" id="ham" data-menu-toggle aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+</nav>
+
+<div class="mob-menu" id="mobMenu">
+  {nav.links.map((link) => <a href={link.href} data-menu-close>{link.label}</a>)}
+</div>

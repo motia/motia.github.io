@@ -39,10 +39,10 @@
     "eyebrow": "Startup Systems Engineer",
     "name": "Moutia Benachour",
     "phrases": [
-      "I build startup systems from idea to production.",
-      "I architect systems that handle real money.",
-      "I build AI-assisted products with proof, control, and fallback logic.",
-      "I turn ambiguous requirements into working systems."
+      "I build startup systems that handle real money.",
+      "I ship AI-assisted products with proof, control, and fallback logic.",
+      "I architect the financial layer founders can actually audit.",
+      "I turn ambiguous requirements into shipped, maintainable systems."
     ],
     "descriptionParts": [
       {
@@ -74,7 +74,7 @@
         "strong": true
       },
       {
-        "text": ". I build systems that move real money, preserve context, survive scaling pressure, and stay maintainable under startup velocity."
+        "text": ". I build systems that move real money, preserve state under failure, survive scaling pressure, and stay maintainable under startup velocity."
       }
     ],
     "stats": [
@@ -124,6 +124,7 @@
       }
     ],
     "badge": {
+      "kind": "toptal",
       "stars": "★ ★ ★",
       "title": "Top 3% Talent",
       "subtitle": "Vetted by",
@@ -138,7 +139,7 @@
       "prefix": "Open to roles",
       "strong": "worth doing."
     },
-    "description": "Consulting, advisory, and high-ownership engineering engagements. Especially in AI products, fintech, SaaS, and startups moving to their next stage. Remote worldwide.",
+    "description": "Consulting, advisory, and high-ownership engineering. Especially where the system needs to be correct, not just functional — AI products, fintech, SaaS, and startups approaching their next inflection point. Remote worldwide.",
     "links": [
       {
         "type": "email",
@@ -183,7 +184,7 @@
     {
       "icon": "money",
       "title": "Financial Infrastructure",
-      "body": "Double-entry ledgers, wallet systems, cent-accurate reconciliation, idempotent payment workflows. I build the financial layer that product teams can reason about and operators can audit.",
+      "body": "Double-entry ledgers, wallet systems, cent-accurate reconciliation, idempotent payment workflows. I build the financial layer that product teams can reason about, operators can audit, and founders can sleep through.",
       "tags": [
         "Double-entry",
         "Stripe",
@@ -196,7 +197,7 @@
     {
       "icon": "systems",
       "title": "Transactional Systems",
-      "body": "Idempotent workflows, retry pipelines, event-sourced state, queue-based processing, and deterministic state transitions. Systems that stay correct under failures, retries, and concurrency.",
+      "body": "Idempotent workflows, retry pipelines, event-sourced state, queue-based processing, and deterministic state transitions. Systems that stay correct when webhooks retry, jobs fail twice, and three requests land at once.",
       "tags": [
         "BullMQ",
         "Idempotency",
@@ -208,7 +209,7 @@
     {
       "icon": "architecture",
       "title": "Startup Architecture",
-      "body": "Monorepo structure, API-first design, shared packages, deployment pipelines, auth, admin dashboards, and product workflows. Architecture that lets small teams move fast without dangerous debt.",
+      "body": "Monorepo structure, API-first design, shared packages, deployment pipelines, auth, admin dashboards, and product workflows. Architecture that lets two engineers move at the pace of ten — without accumulating the debt that kills momentum at Series A.",
       "tags": [
         "Monorepo",
         "OpenAPI",
@@ -220,7 +221,7 @@
     {
       "icon": "modernization",
       "title": "Platform Modernization",
-      "body": "Legacy system evolution without risky rewrites. I stabilize what exists, incrementally upgrade what matters, add tests and observability, and replace only what cannot scale.",
+      "body": "Legacy system evolution without risky rewrites. I stabilize what exists, surgically upgrade what matters, and replace only what cannot scale — without a rewrite that freezes the roadmap for six months.",
       "tags": [
         "Refactoring",
         "Migration",
@@ -232,7 +233,7 @@
     {
       "icon": "data",
       "title": "Data & Automation",
-      "body": "Scraping pipelines, batch processing, ETL workflows, report generation, and long-running workers. Reliable data infrastructure that does not collapse when jobs fail or volume increases.",
+      "body": "Scraping pipelines, batch processing, ETL workflows, report generation, and long-running workers. Reliable data infrastructure that handles job failures gracefully, resumes where it left off, and doesn't wake you up at 3am when volume spikes.",
       "tags": [
         "Web scraping",
         "ETL",
@@ -244,7 +245,7 @@
     {
       "icon": "ai",
       "title": "AI-Assisted Products",
-      "body": "Structured context systems, browser capture, embeddings pipelines, semantic clustering, and LLM-assisted workflows with deterministic fallbacks. AI that ships as product, not a demo.",
+      "body": "Structured context systems, browser capture, embeddings pipelines, semantic clustering, and LLM-assisted workflows with deterministic fallbacks. AI that ships as product — with validation, deterministic fallbacks, and the operational discipline you'd apply to a payment workflow.",
       "tags": [
         "Experience Vault",
         "Embeddings",
@@ -281,7 +282,7 @@
       "outcomes": [
         "Built a private-beta job-application workspace that captures opportunities, maintains a structured Experience Vault, and generates evidence-backed application answers and resume JSON outputs without auto-applying.",
         "Shipped browser-extension capture, server-side job parsing, Vault-grounded answer generation, onboarding, Google login, credit tracking, admin dashboards, public landing pages, and self-hosted infrastructure.",
-        "Reached early usage with 3 beta users plus personal use, 80 captured opportunities, 235 generated application answers, and 10 Reactive Resume-compatible resume JSON outputs.",
+        "In private beta: 4 users, 80 captured opportunities, 235 generated application answers, and 10 Reactive Resume-compatible JSON outputs — all without auto-applying.",
         "Designed the product around manual review and human control — better apply, not auto-apply — with a planned PDF path using self-hosted Reactive Resume, service-account proxy downloads, and later OIDC user accounts."
       ],
       "tech": [
@@ -599,7 +600,7 @@
       "main": "AI in",
       "emphasis": "Production"
     },
-    "subtitle": "AI features are useful only when they are reliable, observable, and designed with fallbacks. This is the operating style I use for structured context, embeddings, clustering, and LLM-assisted workflows.",
+    "subtitle": "AI features earn their place in production when they are reliable, observable, and designed with fallbacks. That's not a principle — it's a constraint I design from.",
     "pipeline": [
       {
         "number": "01",
@@ -648,7 +649,7 @@
       "RAG pipelines with retrieval quality evaluation",
       "Production observability for LLM-powered features"
     ],
-    "quote": "I treat AI features as product systems, not demos — with validation, fallbacks, human control, and the same operational discipline I apply to financial workflows."
+    "quote": "I treat AI features as production systems, not demos — with the same validation, fallbacks, and operational discipline I apply to financial workflows."
   },
   "contact": {
     "eyebrow": "Available for work",
@@ -656,7 +657,7 @@
       "main": "Let's build",
       "emphasis": "something."
     },
-    "copy": "Open to consulting engagements, technical advisory work, and high-ownership engineering roles — especially in AI products, fintech, SaaS, and startups moving to their next stage. Remote worldwide.",
+    "copy": "Open to consulting, technical advisory, and high-ownership engineering — especially where correctness, auditability, and AI discipline actually matter. Remote worldwide.",
     "actions": [
       {
         "label": "Email me",

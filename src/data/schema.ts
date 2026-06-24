@@ -68,6 +68,27 @@ const projectSchema = z.object({
   accentRgb: rgb
 });
 
+const foundationSchema = z.object({
+  eyebrow: nonEmpty,
+  title: nonEmpty,
+  description: nonEmpty,
+  education: z.array(
+    z.object({
+      school: nonEmpty,
+      degree: nonEmpty,
+      period: nonEmpty,
+      details: z.array(nonEmpty).min(1)
+    })
+  ),
+  recognition: z.array(
+    z.object({
+      title: nonEmpty,
+      meta: nonEmpty
+    })
+  ),
+  coursework: z.array(nonEmpty).min(1)
+});
+
 const pipelineStepSchema = z.object({
   number: nonEmpty,
   icon: z.enum(['folder', 'flask', 'database', 'chart', 'ai']),
@@ -158,6 +179,7 @@ export const portfolioSchema = z.object({
     title: splitTitleSchema
   }),
   projects: z.array(projectSchema).min(1),
+  foundations: foundationSchema,
   aiSection: z.object({
     label: nonEmpty,
     title: splitTitleSchema,

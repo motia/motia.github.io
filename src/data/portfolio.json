@@ -594,6 +594,48 @@
       "accentRgb": "74,222,128"
     }
   ],
+  "foundations": {
+    "eyebrow": "Foundations",
+    "title": "Engineering roots, systems thinking.",
+    "description": "Before building production software systems, I trained in electrical engineering, industrial informatics, automation, control systems, and applied machine learning.",
+    "education": [
+      {
+        "school": "Superior National School of Technology, Algiers",
+        "degree": "B.Sc. in Electrical Engineering and Industrial Informatics",
+        "period": "2012 — 2015",
+        "details": [
+          "Graduated with honors",
+          "Valedictorian / Major de Promotion",
+          "Highest GPA in the B.Sc. program"
+        ]
+      },
+      {
+        "school": "University of Science and Technology, Algiers",
+        "degree": "Additional studies in Automation and System Control",
+        "period": "2015 — 2016",
+        "details": [
+          "Completed 60/120 credits",
+          "Studied AI and machine learning applications in automation and system control"
+        ]
+      }
+    ],
+    "recognition": [
+      {
+        "title": "1st Place — NASA App Challenge 2016",
+        "meta": "Blida, Algeria"
+      }
+    ],
+    "coursework": [
+      "Substrate Runtime Developer",
+      "Distributed and concurrent programming",
+      "Linear algebra",
+      "Probability",
+      "Cyber-physical systems",
+      "Computational thinking",
+      "Programming paradigms",
+      "Networking and switching"
+    ]
+  },
   "aiSection": {
     "label": "AI systems",
     "title": {

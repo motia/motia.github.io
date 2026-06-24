@@ -9,6 +9,19 @@ const scrollTopButton = $('#stBtn');
 const mobileMenu = $('#mobMenu');
 const menuButton = $('#ham');
 const sections = ['home', 'proof', 'availability', 'capabilities', 'stages', 'projects', 'ai', 'contact'];
+const paletteMap: Record<string, string> = {
+  'operator-espresso': 'Operator Espresso',
+  'ink-copper': 'Ink Copper',
+  'obsidian-teal': 'Obsidian Teal',
+  'midnight-gold': 'Midnight Gold',
+};
+
+function setupPaletteTheme() {
+  const theme = new URL(window.location.href).searchParams.get('palette')?.trim().toLowerCase();
+  const palette = theme && paletteMap[theme] ? theme : 'operator-espresso';
+
+  document.body.dataset.theme = palette;
+}
 
 let mouseX = 0;
 let mouseY = 0;
@@ -171,6 +184,7 @@ function setupLifecycleTabs() {
 }
 
 setupCursor();
+setupPaletteTheme();
 setupScrollUi();
 setupNavigation();
 setupIntersectionAnimations();

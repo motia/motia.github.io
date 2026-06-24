@@ -1,6 +1,6 @@
 ---
-import type { PortfolioData } from '../data/schema';
-const { lifecycle } = Astro.props as { lifecycle: PortfolioData['lifecycle'] };
+import type { LifecycleEntry } from '../data/site-structure';
+const { lifecycle } = Astro.props as { lifecycle: readonly LifecycleEntry[] };
 ---
 <div class="lifecycle-bar">
   <div class="lifecycle-inner">

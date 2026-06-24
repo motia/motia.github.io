@@ -1,4 +1,7 @@
 import { z } from 'zod';
+import { lifecycleEntries } from './site-structure';
+export { lifecycleEntries } from './site-structure';
+export type { LifecycleEntry } from './site-structure';
 
 const nonEmpty = z.string().min(1);
 const href = z.string().min(1);
@@ -72,6 +75,22 @@ const pipelineStepSchema = z.object({
   description: nonEmpty
 });
 
+const fixedLifecycleEntrySchema = <const T extends (typeof lifecycleEntries)[number]>(entry: T) =>
+  z.object({
+    number: z.literal(entry.number),
+    name: z.literal(entry.name),
+    description: z.literal(entry.description)
+  });
+
+export const websiteStructureSchema = z.object({
+  lifecycle: z.tuple([
+    fixedLifecycleEntrySchema(lifecycleEntries[0]),
+    fixedLifecycleEntrySchema(lifecycleEntries[1]),
+    fixedLifecycleEntrySchema(lifecycleEntries[2]),
+    fixedLifecycleEntrySchema(lifecycleEntries[3])
+  ])
+});
+
 export const portfolioSchema = z.object({
   site: z.object({
     title: nonEmpty,
@@ -110,7 +129,6 @@ export const portfolioSchema = z.object({
     description: nonEmpty,
     links: z.array(availabilityLinkSchema).min(1)
   }),
-  lifecycle: z.array(z.object({ number: nonEmpty, name: nonEmpty, description: nonEmpty })).min(1),
   capabilitiesSection: z.object({
     label: nonEmpty,
     title: splitTitleSchema,
@@ -146,7 +164,7 @@ export const portfolioSchema = z.object({
     actions: z.array(actionSchema).min(1),
     footerTech: z.array(nonEmpty).min(1)
   })
-}).superRefine((data, ctx) => {
+}).strict().superRefine((data, ctx) => {
   const ids = new Set(data.stages.map((stage) => stage.id));
   if (ids.size !== data.stages.length) {
     ctx.addIssue({ code: z.ZodIssueCode.custom, message: 'Stage IDs must be unique', path: ['stages'] });
@@ -159,3 +177,4 @@ export const portfolioSchema = z.object({
 });
 
 export type PortfolioData = z.infer<typeof portfolioSchema>;
+export type WebsiteStructure = z.infer<typeof websiteStructureSchema>;

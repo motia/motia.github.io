@@ -8,11 +8,31 @@
   "nav": {
     "logo": "MB.",
     "links": [
-      { "label": "Capabilities", "href": "#capabilities", "section": "capabilities" },
-      { "label": "Experience", "href": "#stages", "section": "stages" },
-      { "label": "Projects", "href": "#projects", "section": "projects" },
-      { "label": "AI", "href": "#ai", "section": "ai" },
-      { "label": "Contact", "href": "#contact", "section": "contact" }
+      {
+        "label": "Capabilities",
+        "href": "#capabilities",
+        "section": "capabilities"
+      },
+      {
+        "label": "Experience",
+        "href": "#stages",
+        "section": "stages"
+      },
+      {
+        "label": "Projects",
+        "href": "#projects",
+        "section": "projects"
+      },
+      {
+        "label": "AI",
+        "href": "#ai",
+        "section": "ai"
+      },
+      {
+        "label": "Contact",
+        "href": "#contact",
+        "section": "contact"
+      }
     ]
   },
   "hero": {
@@ -25,32 +45,76 @@
       "I turn ambiguous requirements into working systems."
     ],
     "descriptionParts": [
-      { "text": "Full-stack engineer specializing in " },
-      { "text": "transactional correctness", "strong": true },
-      { "text": ", " },
-      { "text": "financial infrastructure", "strong": true },
-      { "text": ", and " },
-      { "text": "startup architecture", "strong": true },
-      { "text": ". I build the systems that move real money, survive scaling pressure, and stay maintainable under startup velocity." }
+      {
+        "text": "Full-stack engineer specializing in "
+      },
+      {
+        "text": "transactional correctness",
+        "strong": true
+      },
+      {
+        "text": ", "
+      },
+      {
+        "text": "financial infrastructure",
+        "strong": true
+      },
+      {
+        "text": ", and "
+      },
+      {
+        "text": "startup architecture",
+        "strong": true
+      },
+      {
+        "text": ". I build the systems that move real money, survive scaling pressure, and stay maintainable under startup velocity."
+      }
     ],
     "stats": [
-      { "value": "9+", "label": "Years" },
-      { "value": "5", "label": "Platforms built" },
-      { "value": "Remote", "label": "Worldwide" },
-      { "value": "10+", "label": "Industries" }
+      {
+        "value": "9+",
+        "label": "Years"
+      },
+      {
+        "value": "5",
+        "label": "Platforms built"
+      },
+      {
+        "value": "Remote",
+        "label": "Worldwide"
+      },
+      {
+        "value": "10+",
+        "label": "Industries"
+      }
     ],
     "actions": [
-      { "label": "Work with me", "href": "#availability", "variant": "primary" },
-      { "label": "See my work", "href": "#stages", "variant": "ghost" }
+      {
+        "label": "Work with me",
+        "href": "#availability",
+        "variant": "primary"
+      },
+      {
+        "label": "See my work",
+        "href": "#stages",
+        "variant": "ghost"
+      }
     ]
   },
   "proof": {
     "kicker": "Independent proof",
     "title": "Screened. Vetted. Top 3%.",
     "descriptionParts": [
-      { "text": "Toptal accepts fewer than " },
-      { "text": "3% of applicants", "strong": true },
-      { "text": ". Available for full-time roles, consulting engagements, and technical advisory work through Toptal or directly." }
+      {
+        "text": "Toptal accepts fewer than "
+      },
+      {
+        "text": "3% of applicants",
+        "strong": true
+      },
+      {
+        "text": ". Available for full-time roles, consulting engagements, and technical advisory work through Toptal or directly."
+      }
     ],
     "badge": {
       "stars": "★ ★ ★",
@@ -63,25 +127,49 @@
   },
   "availability": {
     "eyebrow": "Available for work",
-    "title": { "prefix": "Open to roles", "strong": "worth doing." },
+    "title": {
+      "prefix": "Open to roles",
+      "strong": "worth doing."
+    },
     "description": "Full-time, consulting, and advisory positions. Especially in fintech, SaaS, and startups moving to their next stage. Remote worldwide, available from 6:30 PM UTC.",
     "links": [
-      { "type": "email", "label": "Email", "value": "motia.webdev@gmail.com", "href": "mailto:motia.webdev@gmail.com" },
-      { "type": "linkedin", "label": "LinkedIn", "value": "moutia-benachour", "href": "https://www.linkedin.com/in/moutia-benachour" },
-      { "type": "github", "label": "GitHub", "value": "github.com/motia", "href": "https://github.com/motia" },
-      { "type": "toptal", "label": "Toptal · Top 3%", "value": "View profile & hire", "href": "https://www.toptal.com/developers/resume/moutia-benachour#B36j3D" },
-      { "type": "location", "label": "Location", "value": "Algiers, Algeria · Remote worldwide" }
+      {
+        "type": "email",
+        "label": "Email",
+        "value": "motia.webdev@gmail.com",
+        "href": "mailto:motia.webdev@gmail.com"
+      },
+      {
+        "type": "linkedin",
+        "label": "LinkedIn",
+        "value": "moutia-benachour",
+        "href": "https://www.linkedin.com/in/moutia-benachour"
+      },
+      {
+        "type": "github",
+        "label": "GitHub",
+        "value": "github.com/motia",
+        "href": "https://github.com/motia"
+      },
+      {
+        "type": "toptal",
+        "label": "Toptal · Top 3%",
+        "value": "View profile & hire",
+        "href": "https://www.toptal.com/developers/resume/moutia-benachour#B36j3D"
+      },
+      {
+        "type": "location",
+        "label": "Location",
+        "value": "Algiers, Algeria · Remote worldwide"
+      }
     ]
   },
-  "lifecycle": [
-    { "number": "0 → 1", "name": "Build It", "description": "Idea to working product" },
-    { "number": "1 → 10", "name": "Stabilize It", "description": "Reliability under load" },
-    { "number": "10 → 100", "name": "Scale It", "description": "Architecture for growth" },
-    { "number": "Legacy", "name": "Modernize It", "description": "Pragmatic evolution" }
-  ],
   "capabilitiesSection": {
     "label": "What I bring",
-    "title": { "main": "Domain", "emphasis": "Capabilities" },
+    "title": {
+      "main": "Domain",
+      "emphasis": "Capabilities"
+    },
     "subtitle": "Not a list of technologies. Six capability areas that map directly to the problems startups face when they grow past their first system."
   },
   "capabilities": [
@@ -89,42 +177,81 @@
       "icon": "money",
       "title": "Financial Infrastructure",
       "body": "Double-entry ledgers, wallet systems, cent-accurate reconciliation, idempotent payment workflows. I build the financial layer that auditors and regulators can trust.",
-      "tags": ["Double-entry", "Stripe", "Reconciliation", "BNPL", "Ledgers"]
+      "tags": [
+        "Double-entry",
+        "Stripe",
+        "Reconciliation",
+        "BNPL",
+        "Ledgers"
+      ]
     },
     {
       "icon": "systems",
       "title": "Transactional Systems",
       "body": "Idempotent workflows, retry pipelines, event-sourced state, queue-based processing. Systems that stay correct under failures, retries, and high concurrency.",
-      "tags": ["BullMQ", "Idempotency", "Event-driven", "Redis", "Webhooks"]
+      "tags": [
+        "BullMQ",
+        "Idempotency",
+        "Event-driven",
+        "Redis",
+        "Webhooks"
+      ]
     },
     {
       "icon": "architecture",
       "title": "Startup Architecture",
       "body": "Monorepo structure, API-first design, shared packages, deployment pipelines. Architecture that lets small teams move fast without accumulating dangerous debt.",
-      "tags": ["Monorepo", "OpenAPI", "Fastify", "PostgreSQL", "Docker"]
+      "tags": [
+        "Monorepo",
+        "OpenAPI",
+        "Fastify",
+        "PostgreSQL",
+        "Docker"
+      ]
     },
     {
       "icon": "modernization",
       "title": "Platform Modernization",
       "body": "Legacy system evolution without risky rewrites. I stabilize what exists, incrementally upgrade what matters, and replace what can't scale — pragmatically.",
-      "tags": ["Laravel", "Migration", "AWS", "CI/CD", "Observability"]
+      "tags": [
+        "Laravel",
+        "Migration",
+        "AWS",
+        "CI/CD",
+        "Observability"
+      ]
     },
     {
       "icon": "data",
       "title": "Data & Automation",
       "body": "Scraping pipelines, batch processing, ETL workflows, report generation. Reliable data infrastructure that doesn't collapse when the volume triples overnight.",
-      "tags": ["Web scraping", "ETL", "BullMQ", "Cron", "CSV/Reports"]
+      "tags": [
+        "Web scraping",
+        "ETL",
+        "BullMQ",
+        "Cron",
+        "CSV/Reports"
+      ]
     },
     {
       "icon": "ai",
       "title": "AI-Assisted Products",
       "body": "Embeddings pipelines, semantic clustering, LLM-assisted features with deterministic fallbacks. AI that ships as product, not a demo — with validation and observability.",
-      "tags": ["Embeddings", "OpenAI", "Clustering", "RAG", "Claude Code"]
+      "tags": [
+        "Embeddings",
+        "OpenAI",
+        "Clustering",
+        "RAG",
+        "Claude Code"
+      ]
     }
   ],
   "stagesSection": {
     "label": "Career history",
-    "title": { "main": "Experience by", "emphasis": "Stage" },
+    "title": {
+      "main": "Experience by",
+      "emphasis": "Stage"
+    },
     "subtitle": "Each role mapped to the startup lifecycle phase it represents — because the challenges of 0→1 are completely different from 10→100."
   },
   "stages": [
@@ -136,7 +263,11 @@
       "phaseBadge": "0 → 1 · Build from scratch",
       "company": "Sam Stone",
       "role": "Full-stack Developer · via Toptal",
-      "meta": ["2026 – Present", "Remote", "Fintech · Trading"],
+      "meta": [
+        "2026 – Present",
+        "Remote",
+        "Fintech · Trading"
+      ],
       "industry": "Trading Platform",
       "outcomesTitle": "What I built & why it matters",
       "outcomes": [
@@ -145,7 +276,22 @@
         "Implemented trading, IPO precommitment, NAV, and membership billing — complex financial workflows that require correctness, not just functionality.",
         "Established AGENTS.md and repo-level AI documentation — making Claude Code a reliable team member with deterministic, auditable behavior."
       ],
-      "tech": ["TypeScript", "Fastify", "Node.js", "React 19", "Vite", "PostgreSQL", "Redis", "BullMQ", "Stripe", "Plaid", "Zod", "OpenAPI", "Yarn 4", "Render"]
+      "tech": [
+        "TypeScript",
+        "Fastify",
+        "Node.js",
+        "React 19",
+        "Vite",
+        "PostgreSQL",
+        "Redis",
+        "BullMQ",
+        "Stripe",
+        "Plaid",
+        "Zod",
+        "OpenAPI",
+        "Yarn 4",
+        "Render"
+      ]
     },
     {
       "id": "s1",
@@ -155,7 +301,11 @@
       "phaseBadge": "0 → 1 · Full platform from zero",
       "company": "BKSolutions Inc.",
       "role": "Full-stack Developer · via Toptal",
-      "meta": ["2025 – 2026", "Remote", "Fintech · BNPL"],
+      "meta": [
+        "2025 – 2026",
+        "Remote",
+        "Fintech · BNPL"
+      ],
       "industry": "BNPL Platform",
       "outcomesTitle": "What I built & why it matters",
       "outcomes": [
@@ -164,7 +314,21 @@
         "Built immutable investor and platform ledgers with wallet accounting, repayment distribution, profit-share calculations — financial infrastructure that scales to thousands of concurrent loans.",
         "Implemented idempotent webhook ingestion and auditable workflow routing — making the system safe to retry under any failure condition."
       ],
-      "tech": ["TypeScript", "Fastify", "React Native", "Solito", "Tamagui", "PostgreSQL", "Redis", "BullMQ", "Stripe Issuing", "Docker", "Zod", "Vitest", "Testcontainers"]
+      "tech": [
+        "TypeScript",
+        "Fastify",
+        "React Native",
+        "Solito",
+        "Tamagui",
+        "PostgreSQL",
+        "Redis",
+        "BullMQ",
+        "Stripe Issuing",
+        "Docker",
+        "Zod",
+        "Vitest",
+        "Testcontainers"
+      ]
     },
     {
       "id": "s2",
@@ -174,7 +338,11 @@
       "phaseBadge": "0 → 1 · Co-founder",
       "company": "Dromigo",
       "role": "Senior Engineer · Co-Founder",
-      "meta": ["2018 – 2019", "Remote · Spain", "Logistics · Marketplace"],
+      "meta": [
+        "2018 – 2019",
+        "Remote · Spain",
+        "Logistics · Marketplace"
+      ],
       "industry": "Logistics Marketplace",
       "outcomesTitle": "What I built & why it matters",
       "outcomes": [
@@ -182,7 +350,15 @@
         "Built a GIS-based freight matching engine — geospatial search connecting carriers and shippers across a two-sided logistics marketplace.",
         "Shipped a Flutter mobile app with real-time driver tracking and Stripe payment integration."
       ],
-      "tech": ["Node.js", "Flutter", "PostgreSQL", "GIS", "WebSocket", "Stripe", "Nuxt.js"]
+      "tech": [
+        "Node.js",
+        "Flutter",
+        "PostgreSQL",
+        "GIS",
+        "WebSocket",
+        "Stripe",
+        "Nuxt.js"
+      ]
     },
     {
       "id": "s3",
@@ -192,7 +368,11 @@
       "phaseBadge": "1 → 10 · AI-powered analytics product",
       "company": "BenchCommerce",
       "role": "Full-stack Developer · AI Systems",
-      "meta": ["Project-based", "Remote", "E-commerce Analytics · AI"],
+      "meta": [
+        "Project-based",
+        "Remote",
+        "E-commerce Analytics · AI"
+      ],
       "industry": "E-commerce AI",
       "outcomesTitle": "What I built & why it matters",
       "outcomes": [
@@ -200,7 +380,17 @@
         "Integrated an LLM naming layer with strict output validation and deterministic fallback — making AI-generated taxonomy stable and safe for business users to rely on.",
         "Computed niche confidence scores using embedding cohesion, coverage, and representative-product agreement — turning black-box clustering into an observable, debuggable system."
       ],
-      "tech": ["TypeScript", "Node.js", "PostgreSQL", "OpenAI Embeddings", "K-means", "LLM Integration", "Drizzle ORM", "React", "Vite"]
+      "tech": [
+        "TypeScript",
+        "Node.js",
+        "PostgreSQL",
+        "OpenAI Embeddings",
+        "K-means",
+        "LLM Integration",
+        "Drizzle ORM",
+        "React",
+        "Vite"
+      ]
     },
     {
       "id": "s4",
@@ -210,7 +400,11 @@
       "phaseBadge": "10 → 100 · Scaling under load",
       "company": "PowerMarket",
       "role": "Senior Full-stack Developer",
-      "meta": ["2022 – 2023", "Remote · UK", "Renewable Energy"],
+      "meta": [
+        "2022 – 2023",
+        "Remote · UK",
+        "Renewable Energy"
+      ],
       "industry": "Energy Platform",
       "outcomesTitle": "What I built & why it matters",
       "outcomes": [
@@ -218,7 +412,16 @@
         "Optimized large-marker map performance using server-side and client-side caching with dynamic grouping by zoom level — solving a UX problem that had been blocking adoption.",
         "Migrated mapping from Mapbox to Google Maps under deadline and improved scalability using queue-based workflows — two high-risk deliveries shipped on time."
       ],
-      "tech": ["Laravel", "PHP", "AWS", "ElastiCache", "S3", "SES", "Google Maps", "Highcharts"]
+      "tech": [
+        "Laravel",
+        "PHP",
+        "AWS",
+        "ElastiCache",
+        "S3",
+        "SES",
+        "Google Maps",
+        "Highcharts"
+      ]
     },
     {
       "id": "s5",
@@ -228,14 +431,26 @@
       "phaseBadge": "Modernize · Legacy evolution",
       "company": "Scraping & Laravel",
       "role": "Web Scraping Engineer · Laravel Modernization",
-      "meta": ["2026", "Remote", "Data · Legal Software"],
+      "meta": [
+        "2026",
+        "Remote",
+        "Data · Legal Software"
+      ],
       "industry": "Data Pipeline",
       "outcomesTitle": "What I built & why it matters",
       "outcomes": [
         "Built resilient state-specific license scrapers with batching, retry/recovery, resume support, duplicate detection, and failure classification — turning fragile scripts into a reliable pipeline.",
         "Modernized Laravel 8 toward a current stack — Jetstream, Livewire, Fortify auth, team management, admin/editor roles — incrementally, without breaking production."
       ],
-      "tech": ["PHP", "Laravel", "MySQL", "Dusk", "Browserless", "Docker", "GitHub Actions"]
+      "tech": [
+        "PHP",
+        "Laravel",
+        "MySQL",
+        "Dusk",
+        "Browserless",
+        "Docker",
+        "GitHub Actions"
+      ]
     },
     {
       "id": "s6",
@@ -245,19 +460,34 @@
       "phaseBadge": "Consulting · All stages",
       "company": "Toptal",
       "role": "Software Consultant · Top 3%",
-      "meta": ["2022 – Present", "Remote · Worldwide", "Multiple industries"],
+      "meta": [
+        "2022 – Present",
+        "Remote · Worldwide",
+        "Multiple industries"
+      ],
       "industry": "Platform Consulting",
       "outcomesTitle": "What this means",
       "outcomes": [
         "Vetted in the top 3% of engineers on Toptal — a rigorous screening process covering technical depth, communication, and delivery reliability.",
         "Delivered complete products across fintech, energy, logistics, and e-commerce — working directly with founders, CTOs, and product owners across ambiguous, fast-moving environments."
       ],
-      "tech": ["Node.js", "TypeScript", "React", "PostgreSQL", "Stripe", "AWS", "Docker"]
+      "tech": [
+        "Node.js",
+        "TypeScript",
+        "React",
+        "PostgreSQL",
+        "Stripe",
+        "AWS",
+        "Docker"
+      ]
     }
   ],
   "projectsSection": {
     "label": "Selected work",
-    "title": { "main": "Past", "emphasis": "Projects" }
+    "title": {
+      "main": "Past",
+      "emphasis": "Projects"
+    }
   },
   "projects": [
     {
@@ -265,7 +495,13 @@
       "domain": "Logistics · Marketplace",
       "title": "Dromigo",
       "description": "Two-sided logistics marketplace with GIS freight matching, real-time driver tracking, and Stripe payments. Co-founded and shipped from zero.",
-      "stack": ["Node.js", "Flutter", "GIS", "Stripe", "WebSocket"],
+      "stack": [
+        "Node.js",
+        "Flutter",
+        "GIS",
+        "Stripe",
+        "WebSocket"
+      ],
       "accentRgb": "217,119,6"
     },
     {
@@ -273,7 +509,12 @@
       "domain": "Fintech · Virtual Cards",
       "title": "Rassidi",
       "description": "Fintech PWA for virtual payment cards in local currency. Laravel API, real-time inventory, push notifications, and seamless mobile experience.",
-      "stack": ["Laravel", "Nuxt.js", "PWA", "Onesignal"],
+      "stack": [
+        "Laravel",
+        "Nuxt.js",
+        "PWA",
+        "Onesignal"
+      ],
       "accentRgb": "96,165,250"
     },
     {
@@ -281,7 +522,12 @@
       "domain": "B2B SaaS · CRM",
       "title": "Adgon Expert",
       "description": "Full CRM for expert geometers with a public-facing professional search engine, subscription billing, and tender/news feeds per plan tier.",
-      "stack": ["Laravel", "Nuxt.js", "MySQL", "CRM"],
+      "stack": [
+        "Laravel",
+        "Nuxt.js",
+        "MySQL",
+        "CRM"
+      ],
       "accentRgb": "167,139,250"
     },
     {
@@ -289,20 +535,53 @@
       "domain": "Healthcare · Scheduling",
       "title": "Medic Dz",
       "description": "Real-time medical appointment management. Patients and providers see live availability via WebSocket. Packaged as iOS and Android via Cordova.",
-      "stack": ["Laravel", "Vue", "WebSocket", "Cordova"],
+      "stack": [
+        "Laravel",
+        "Vue",
+        "WebSocket",
+        "Cordova"
+      ],
       "accentRgb": "74,222,128"
     }
   ],
   "aiSection": {
     "label": "AI systems",
-    "title": { "main": "AI in", "emphasis": "Production" },
+    "title": {
+      "main": "AI in",
+      "emphasis": "Production"
+    },
     "subtitle": "AI features are useful only when they are reliable, observable, and designed with fallbacks. This is the operating style I use for embeddings, clustering, and LLM-assisted workflows.",
     "pipeline": [
-      { "number": "01", "icon": "folder", "label": "Ingest product catalog", "description": "Shopify / Etsy · batch + retry" },
-      { "number": "02", "icon": "flask", "label": "Generate embeddings", "description": "OpenAI-compatible · titles + descriptions" },
-      { "number": "03", "icon": "database", "label": "Store in PostgreSQL", "description": "Vectors + centroids · cosine similarity" },
-      { "number": "04", "icon": "chart", "label": "K-means cluster niches", "description": "Incremental centroid assignment" },
-      { "number": "05", "icon": "ai", "label": "LLM names the niche", "description": "Strict validation + deterministic fallback" }
+      {
+        "number": "01",
+        "icon": "folder",
+        "label": "Ingest product catalog",
+        "description": "Shopify / Etsy · batch + retry"
+      },
+      {
+        "number": "02",
+        "icon": "flask",
+        "label": "Generate embeddings",
+        "description": "OpenAI-compatible · titles + descriptions"
+      },
+      {
+        "number": "03",
+        "icon": "database",
+        "label": "Store in PostgreSQL",
+        "description": "Vectors + centroids · cosine similarity"
+      },
+      {
+        "number": "04",
+        "icon": "chart",
+        "label": "K-means cluster niches",
+        "description": "Incremental centroid assignment"
+      },
+      {
+        "number": "05",
+        "icon": "ai",
+        "label": "LLM names the niche",
+        "description": "Strict validation + deterministic fallback"
+      }
     ],
     "strengthsLabel": "What I'm strong at today",
     "strengths": [
@@ -323,12 +602,28 @@
   },
   "contact": {
     "eyebrow": "Available for work",
-    "title": { "main": "Let's build", "emphasis": "something." },
+    "title": {
+      "main": "Let's build",
+      "emphasis": "something."
+    },
     "copy": "Open to full-time roles, consulting engagements, and technical advisory positions — especially in fintech, SaaS, and startups moving to their next stage. Remote worldwide.",
     "actions": [
-      { "label": "Email me", "href": "mailto:motia.webdev@gmail.com", "variant": "primary" },
-      { "label": "Toptal profile", "href": "https://www.toptal.com/developers/resume/moutia-benachour#B36j3D", "variant": "ghost", "external": true }
+      {
+        "label": "Email me",
+        "href": "mailto:motia.webdev@gmail.com",
+        "variant": "primary"
+      },
+      {
+        "label": "Toptal profile",
+        "href": "https://www.toptal.com/developers/resume/moutia-benachour#B36j3D",
+        "variant": "ghost",
+        "external": true
+      }
     ],
-    "footerTech": ["Fraunces", "DM Sans", "Astro"]
+    "footerTech": [
+      "Fraunces",
+      "DM Sans",
+      "Astro"
+    ]
   }
 }

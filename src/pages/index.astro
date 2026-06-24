@@ -1,5 +1,6 @@
 ---
 import portfolio from '../data/portfolio.json';
+import { lifecycleEntries } from '../data/site-structure';
 import type { PortfolioData } from '../data/schema';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/Header.astro';
@@ -20,7 +21,7 @@ const data = portfolio as PortfolioData;
   <Hero hero={data.hero} />
   <Proof proof={data.proof} />
   <Availability availability={data.availability} />
-  <LifecycleBar lifecycle={data.lifecycle} />
+  <LifecycleBar lifecycle={lifecycleEntries} />
   <Capabilities section={data.capabilitiesSection} capabilities={data.capabilities} />
   <Stages section={data.stagesSection} stages={data.stages} />
   <Projects section={data.projectsSection} projects={data.projects} />

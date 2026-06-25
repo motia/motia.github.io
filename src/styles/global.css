@@ -108,6 +108,13 @@ body {
   cursor: none;
 }
 
+img,
+svg,
+video,
+canvas {
+  max-width: 100%;
+}
+
 .palette-badge {
   position: fixed;
   top: 18px;
@@ -246,6 +253,7 @@ nav.s {
   display: flex; flex-direction: column; justify-content: center;
   padding: 110px 56px 96px 56px; position: relative; z-index: 2;
   max-width: 1120px;
+  min-width: 0;
 }
 
 .hero-right {
@@ -255,6 +263,7 @@ nav.s {
   align-items: center;
   justify-content: center;
   padding: 110px 56px 96px 0;
+  min-width: 0;
 }
 
 .hero-logo-panel {
@@ -297,6 +306,7 @@ nav.s {
   font-size: clamp(44px, 5.5vw, 80px);
   font-weight: 900; line-height: .95; letter-spacing: -.03em;
   opacity: 0; animation: fadeUp .7s .25s forwards;
+  max-width: 100%;
 }
 .hero-h1 em {
   font-style: italic; color: var(--amber);
@@ -335,6 +345,7 @@ nav.s {
   font-size: 15px; line-height: 1.75; color: var(--text2);
   max-width: 620px;
   opacity: 0; animation: fadeUp .7s .6s forwards;
+  overflow-wrap: anywhere;
 }
 .hero-desc strong { color: var(--text); font-weight: 600; }
 
@@ -1051,7 +1062,8 @@ section { padding: 112px 0; position: relative; }
 @media (max-width: 960px) {
   #home { grid-template-columns: 1fr; }
   .hero-right { display: none; }
-  .hero-left { padding: 80px 32px; }
+  .hero-left { padding: 80px 32px; width: 100%; }
+  .hero-h1 { font-size: clamp(42px, 14vw, 72px); }
   nav { padding: 18px 28px; }
   .nav-links { display: none; }
   .ham { display: flex; }
@@ -1059,9 +1071,27 @@ section { padding: 112px 0; position: relative; }
   .container { padding: 0 28px; }
   .cap-grid { grid-template-columns: 1fr; }
   .stages-layout { grid-template-columns: 1fr; }
-  .stages-nav { position: static; flex-direction: row; flex-wrap: wrap; border-left: none; border-bottom: 1px solid var(--border); }
-  .sn-item { border-left: none; border-bottom: 2px solid transparent; padding: 10px 16px; }
-  .sn-item.active { border-left: none; border-bottom-color: var(--amber); background: transparent; }
+  .stages-nav {
+    position: static;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    border-left: none;
+    border-bottom: none;
+  }
+  .sn-item {
+    min-width: 0;
+    min-height: 82px;
+    margin: 0;
+    padding: 14px 16px;
+    border: 1px solid var(--border);
+    border-left: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+  .sn-item.active {
+    border-left: 1px solid var(--border);
+    border-bottom: 2px solid var(--amber);
+    background: var(--bg2);
+  }
   .proj-grid { grid-template-columns: 1fr; }
   .ai-layout, .contact-layout, .proof-layout, .availability-card, .final-cta-inner { grid-template-columns: 1fr; gap: 48px; }
   .availability-copy { border-right: none; border-bottom: 1px solid var(--border); padding: 48px 32px; }
@@ -1070,7 +1100,47 @@ section { padding: 112px 0; position: relative; }
   .proof-badge-card { width: min(200px, 100%); }
   #proof, #availability { padding: 72px 0; }
   section { padding: 72px 0; }
-  .hero-stats { flex-wrap: wrap; }
+  .hero-rotating {
+    height: auto;
+    min-height: 0;
+    overflow: visible;
+  }
+  .hero-rotating-inner { animation: none; }
+  .hero-phrase {
+    display: none;
+    height: auto;
+    line-height: 1.55;
+    white-space: normal;
+    overflow-wrap: break-word;
+  }
+  .hero-phrase:first-child { display: block; }
+  .hero-stats {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 100%;
+    max-width: 520px;
+  }
+  .hero-cta {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 100%;
+    max-width: 520px;
+  }
+  .hero-cta .btn-p,
+  .hero-cta .btn-g {
+    min-width: 0;
+    padding-left: 14px;
+    padding-right: 14px;
+    text-align: center;
+  }
+  .h-stat {
+    padding: 18px 14px;
+    border-right: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+  .h-stat:nth-child(2n) { border-right: none; }
+  .h-stat:nth-last-child(-n + 2) { border-bottom: none; }
+  .h-stat-l { overflow-wrap: anywhere; }
   .lifecycle-inner { overflow-x: auto; }
   .stage-tab { min-width: 160px; }
 }
@@ -1092,5 +1162,85 @@ section { padding: 112px 0; position: relative; }
 
 @media (max-width: 760px) {
   .section-lead { grid-template-columns: 1fr; gap: 18px; }
-  .proof-layout { gap: 32px; }
+  .proof-layout { gap: 32px; justify-items: center; grid-template-columns: 1fr; }
+}
+
+@media (max-width: 520px) {
+  nav { padding: 18px 24px; }
+  .container { padding: 0 24px; }
+  .hero-left { padding: 78px 24px 72px; }
+  .hero-eyebrow {
+    gap: 8px;
+    letter-spacing: .18em;
+    margin-bottom: 26px;
+  }
+  .hero-eyebrow::before { width: 24px; }
+  .hero-h1 { font-size: clamp(40px, 13.5vw, 58px); }
+  .hero-divider { margin: 28px 0; }
+  .hero-desc { font-size: 14.5px; line-height: 1.72; }
+  .hero-stats { margin-top: 32px; }
+  .h-stat-n { font-size: 26px; }
+  .h-stat-l { font-size: 9px; letter-spacing: .12em; }
+  .hero-cta { margin-top: 28px; gap: 10px; }
+  .hero-cta .btn-p,
+  .hero-cta .btn-g {
+    font-size: 10.5px;
+    letter-spacing: .08em;
+    padding: 13px 10px;
+  }
+  .stages-layout { gap: 40px; }
+  .stages-nav { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .sn-item { min-height: 78px; padding: 13px 14px; }
+  .sn-label { font-size: 12.5px; }
+  .sn-range { font-size: 9.5px; }
+}
+
+
+/* Fix stage detail badge overflow on mobile */
+.stages-content,
+.stage-panel,
+.sp-header,
+.sp-left,
+.sp-right {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.sp-phase-badge {
+  box-sizing: border-box;
+  display: inline-block;
+  width: fit-content;
+  max-width: 100%;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: normal;
+  line-height: 1.45;
+}
+
+@media (max-width: 760px) {
+  .sp-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .sp-left,
+  .sp-right {
+    width: 100%;
+  }
+
+  .sp-right {
+    text-align: left;
+  }
+
+  .sp-phase-badge {
+    letter-spacing: 0.13em;
+    padding: 5px 10px;
+  }
+
+  .sp-industry {
+    max-width: 100%;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
 }

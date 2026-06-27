@@ -137,6 +137,31 @@ function setupIntersectionAnimations() {
   });
 }
 
+
+
+function setupHeroLogoReveal() {
+  const panel = document.querySelector<HTMLElement>('.hero-logo-panel');
+  if (!panel) return;
+
+  const reveal = () => panel.classList.add('in-view');
+
+  if (!('IntersectionObserver' in window)) {
+    reveal();
+    return;
+  }
+
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      if (!entry?.isIntersecting) return;
+      reveal();
+      observer.disconnect();
+    },
+    { threshold: 0.35 },
+  );
+
+  observer.observe(panel);
+}
+
 function setupStages() {
   $$<HTMLButtonElement>('.sn-item[data-stage-target]').forEach((button) => {
     button.addEventListener('click', () => {
@@ -188,6 +213,7 @@ setupPaletteTheme();
 setupScrollUi();
 setupNavigation();
 setupIntersectionAnimations();
+setupHeroLogoReveal();
 setupStages();
 setupProjectTilt();
 setupLifecycleTabs();
